@@ -11,15 +11,13 @@
 <script>
 let content = ["Hello buddy!",
                "Welcome to kanishk's world",
-                "A legendary world",
+                "A legendary world 😎",
               "Rocking since 1999",
             "Graduated from IET lucknow, 2021",
             "I am a",
             "Frontend developer, a creatively boring person. Nah!",
           "Backend developer, a logically boring person, Nah!",
         "I am a creatively logically boring person, Yes!"];
-
-let char = 0;
 
 
 let lineNo = 0;
@@ -46,9 +44,7 @@ function initialize(line) {
       text.innerHTML += `<span  style='animation-delay:${i*0.1}s'>` + content[line][i] + "</span>";
     }
   }
-  
-  char = 0;
-    
+   
 }
 </script>
 
@@ -60,6 +56,11 @@ body {
   font-family: 'Caveat', cursive;
   padding: 0;
   margin: 0;
+	font-size: 2rem;
+}
+	
+.fancy {
+font-size: 2rem;
 }
 
 section {
@@ -73,23 +74,7 @@ section {
   color: white;
 }
 
-h1 {
-  color: rgba(255,255,255,.85);
-  font-size: 3em;
-  text-shadow: 2px 3px 5px rgba(0,0,0,0.1);
-}
 
-.restart {
-  cursor: pointer;
-  color: rgba(0,0,0,.35);
-  font-size: 2em;
-  margin: 0;
-  padding: 0;
-  text-shadow: 2px 3px 5px rgba(0,0,0,0.1);
-}
-.restart:hover {
-  color: rgba(0,0,0,.5);
-}
 
 span {
   display: inline-block;
