@@ -30,7 +30,7 @@ async function trick() {
   if(lineNo < content.length) {
     initialize(lineNo);
     lineNo++;
-    await setTimeout(() =>  trick(), Math.max(content[lineNo-1], 18).length*200);
+    await setTimeout(() =>  trick(), Math.max(content[lineNo-1].length, 18)*200);
   }
 }
 
