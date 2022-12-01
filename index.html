@@ -19,6 +19,8 @@ let content = ["Hello buddy!",
           "Backend developer, a logically boring person, Nah!",
         "I am a creatively logically boring person, Yes!"];
 
+let char = 0;
+
 
 let lineNo = 0;
 
@@ -37,14 +39,19 @@ function initialize(line) {
   const text = document.querySelector('.fancy');
   text.innerHTML = "";
   
-   for (let i=0; i < content[line].length; i++) {
-    if (content[line][i] === " ") {
-      text.innerHTML += `<span class='space' style='animation-delay:${i*0.1}s'>` + content[line][i] + " </span>";
-    } else {
-      text.innerHTML += `<span  style='animation-delay:${i*0.1}s'>` + content[line][i] + "</span>";
-    }
+  const lineToDisplay = content[line].split(" ");
+  
+   for (let i=0; i < lineToDisplay.length; i++) {
+    
+     text.innerHTML += `<span  style='animation-delay:${i*0.1}s'>` + lineToDisplay[i] + "</span>";
+     
+      text.innerHTML += `<span class='space' 
+style='animation-delay:${i*0.1}s'>` + " " + " </span>";
+ 
   }
-   
+  
+  char = 0;
+    
 }
 </script>
 
